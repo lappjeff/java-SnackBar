@@ -65,14 +65,16 @@ public class Snack
     this.quantity = this.quantity + quantity;
   }
 
-  public int getSnackQuantity()
+  public String getSnackQuantity()
   {
-    return quantity;
+    return "There are " + quantity + " " + name + "'s left";
   }
 
-  public void buySnack(int quantity)
+  public double sellSnack(int quantity)
   {
     this.quantity = this.quantity - quantity;
+    double cost = quantity * this.cost;
+    return cost;
   }
 
   public String getSnackPrice(int quantity)

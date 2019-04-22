@@ -16,9 +16,9 @@ public class Customer
     this.cash = cash;
   }
 
-  public double getCash()
+  public String getCash()
   {
-    return cash;
+    return name + " has $" + cash + " dollars left";
   }
 
   public void setCash (double cash)
@@ -34,6 +34,11 @@ public class Customer
   public void setName(String newName)
   {
     this.name = newName;
+  }
+
+  public void buySnack(double cashSpent)
+  {
+    this.cash -= cashSpent;
   }
 
   @Override

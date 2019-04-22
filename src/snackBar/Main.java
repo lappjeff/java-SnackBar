@@ -22,6 +22,10 @@ public class Main
 
     System.out.println("*** Query Data");
 
+    jane.buySnack(soda.sellSnack(3));
+    System.out.println(jane.getCash());
+    System.out.println(soda.getSnackQuantity());
+
   }
 
   public static void main(String[] args)
