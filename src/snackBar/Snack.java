@@ -78,8 +78,18 @@ public class Snack
   public String getSnackPrice(int quantity)
   {
     double totalCost = quantity * cost;
-    // String toString = String.valueOf(totalCost);
     return "That will cost you $" + String.valueOf(totalCost);
+  }
+
+  @Override
+  public String toString()
+  {
+    String rtnStr = "id: " + id + "\n" +
+                    "Snack name: " + name + "\n" +
+                    "Quantity remaining: " + quantity + "\n" +
+                    "Cost: " + cost + "\n" +
+                    "Vendor ID: " + vendingMachineId;
+    return rtnStr;
   }
 
 }
