@@ -12,12 +12,12 @@ public class Main
     VendingMachine drink = new VendingMachine("Drink");
     VendingMachine office = new VendingMachine("Office");
 
-    Snack chips = new Snack("Chips", 36, 1.75, food.getId());
-    Snack chocolateBar = new Snack("Chocolate Bar", 36, 1, food.getId());
-    Snack pretzel = new Snack("Pretzel", 30, 2, food.getId());
+    Snack chips = new Snack("Chips", 36, 1.75, food.getId(), food.getName());
+    Snack chocolateBar = new Snack("Chocolate Bar", 36, 1, food.getId(), food.getName());
+    Snack pretzel = new Snack("Pretzel", 30, 2, food.getId(), food.getName());
 
-    Snack soda = new Snack("Soda", 24, 2.50, drink.getId());
-    Snack water = new Snack("Water", 20, 2.75, drink.getId());
+    Snack soda = new Snack("Soda", 24, 2.50, drink.getId(), drink.getName());
+    Snack water = new Snack("Water", 20, 2.75, drink.getId(), drink.getName());
 
 
     System.out.println("*** \n Jane Does Stuff\n***");
@@ -52,6 +52,8 @@ public class Main
     pretzel.setSnackQuantity(12);
     System.out.print(pretzel.getSnackQuantity());
 
+    System.out.println("*** \n Stretch work\n***");
+    System.out.println(pretzel);
   }
 
   public static void main(String[] args)

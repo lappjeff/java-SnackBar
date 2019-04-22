@@ -8,8 +8,8 @@ public class Snack
   private int quantity;
   private double cost;
   private int vendingMachineId;
-
-  public Snack(String name, int quantity, double cost, int vendingMachineId)
+  private String machineName;
+  public Snack(String name, int quantity, double cost, int vendingMachineId, String machineName)
   {
     maxId++;
     id = maxId;
@@ -18,6 +18,7 @@ public class Snack
     this.quantity = quantity;
     this.cost = cost;
     this.vendingMachineId = vendingMachineId;
+    this.machineName = machineName;
   }
 
   public void setId(int newId)
@@ -86,12 +87,10 @@ public class Snack
   @Override
   public String toString()
   {
-    String rtnStr = "id: " + id + "\n" +
-                    "Snack name: " + name + "\n" +
+    String rtnStr = "Snack name: " + name + "\n" +
+                    "Vendor Name: " + machineName + "\n" +
                     "Quantity remaining: " + quantity + "\n" +
-                    "Cost: " + cost + "\n" +
-                    "Vendor ID: " + vendingMachineId;
-    return rtnStr;
+                    "Total Cost: " + quantity * cost + "\n";    return rtnStr;
   }
 
 }
