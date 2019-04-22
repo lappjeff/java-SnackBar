@@ -67,7 +67,7 @@ public class Snack
 
   public String getSnackQuantity()
   {
-    return "There are " + quantity + " " + name + "'s left";
+    return "There are " + quantity + " " + name + "'s left \n";
   }
 
   public double sellSnack(int quantity)

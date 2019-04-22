@@ -18,12 +18,12 @@ public class Customer
 
   public String getCash()
   {
-    return name + " has $" + cash + " dollars left";
+    return name + " has $" + cash + " dollars left \n" ;
   }
 
-  public void setCash (double cash)
+  public void addCash (double cash)
   {
-    this.cash = cash;
+    this.cash += cash;
   }
 
   public String getName()
